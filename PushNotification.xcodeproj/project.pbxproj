@@ -17,7 +17,6 @@
 		E872715828412044007CEEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E872715628412044007CEEB1 /* LaunchScreen.storyboard */; };
 		E87271642841295A007CEEB1 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87271632841295A007CEEB1 /* CollectionViewController.swift */; };
 		E872716628412969007CEEB1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872716528412969007CEEB1 /* CollectionViewCell.swift */; };
-		E872716828412BF2007CEEB1 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872716728412BF2007CEEB1 /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		E872715928412044007CEEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E87271632841295A007CEEB1 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E872716528412969007CEEB1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		E872716728412BF2007CEEB1 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,6 @@
 				E4DF1CF051D093492272908D /* Pods-PushNotification.debug.xcconfig */,
 				A49E0528FC1E2C96E61A2394 /* Pods-PushNotification.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,7 +90,6 @@
 				E872714A28412043007CEEB1 /* SceneDelegate.swift */,
 				E872714C28412043007CEEB1 /* ViewController.swift */,
 				E872714E28412043007CEEB1 /* Main.storyboard */,
-				E872716728412BF2007CEEB1 /* ImageModel.swift */,
 				E87271632841295A007CEEB1 /* CollectionViewController.swift */,
 				E872716528412969007CEEB1 /* CollectionViewCell.swift */,
 				E872715428412044007CEEB1 /* Assets.xcassets */,
@@ -225,7 +221,6 @@
 				E872714928412043007CEEB1 /* AppDelegate.swift in Sources */,
 				E872714B28412043007CEEB1 /* SceneDelegate.swift in Sources */,
 				E87271642841295A007CEEB1 /* CollectionViewController.swift in Sources */,
-				E872716828412BF2007CEEB1 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

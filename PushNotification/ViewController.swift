@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var CountNewNotification: UILabel!
     
     var numberOfNewNotification = "\(imageUrls.count)"
@@ -17,8 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         CountNewNotification.text = "У вас новых \(numberOfNewNotification) уведомлений"
     }
 
