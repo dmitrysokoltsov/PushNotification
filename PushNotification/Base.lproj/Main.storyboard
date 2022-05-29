@@ -79,8 +79,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MpU-Xv-Zda">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="MpU-Xv-Zda">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -101,13 +102,22 @@
                             <outlet property="delegate" destination="tBn-OP-HBD" id="1Pm-Yf-20J"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="0QB-6U-MQx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yyq-k0-zSS">
-                            <connections>
-                                <action selector="addNewUrl:" destination="tBn-OP-HBD" id="52A-CZ-tas"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="yyq-k0-zSS">
+                                <connections>
+                                    <action selector="addUrl:" destination="tBn-OP-HBD" id="3rm-y5-fRc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="3XN-OW-JuH">
+                                <connections>
+                                    <action selector="deleteImage:" destination="tBn-OP-HBD" id="IMn-ZB-koS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7v-jD-zGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
