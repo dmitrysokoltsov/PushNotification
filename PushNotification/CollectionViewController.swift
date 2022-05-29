@@ -48,6 +48,7 @@ class CollectionViewController: UICollectionViewController {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+        imageUrls.removeAll()
         self.collectionView.reloadData()
     }
     
