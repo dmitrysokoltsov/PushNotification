@@ -18,7 +18,25 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
     }
-
+    @IBAction func addNewUrl(_ sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: "New url", message: "Enter new url", preferredStyle: .alert)
+        
+        let newUrl = UIAlertAction(title: "Save", style: .default) { url in
+            let tf = alert.textFields?.first
+            if let newUrl = tf?.text {
+                imageUrls.insert(newUrl, at: 0)
+                self.collectionView.reloadData()
+            }
+        }
+        alert.addTextField()
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(newUrl)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
