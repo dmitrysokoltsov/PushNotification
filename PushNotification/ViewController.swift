@@ -10,19 +10,11 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var CountNewNotification: UILabel!
-    
-    var numberOfNewNotification = "\(imageUrls.count)"
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CountNewNotification.text = "У вас новых \(numberOfNewNotification) уведомлений"
-    }
-
-    @IBAction func showImageButton(_ sender: Any) {
-    }
-    
+  
 }
-
+    @IBAction func buttonToSecondView(_ sender: UIButton) {
+    }
+}

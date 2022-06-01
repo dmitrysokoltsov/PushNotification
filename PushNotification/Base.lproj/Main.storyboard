@@ -25,33 +25,19 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                 <connections>
-                                    <segue destination="tBn-OP-HBD" kind="show" id="yLg-f5-NTs"/>
+                                    <action selector="buttonToSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KvQ-4H-YTP"/>
+                                    <segue destination="tBn-OP-HBD" kind="show" id="tiA-Nj-jQQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vb-WR-o7b">
-                                <rect key="frame" x="65" y="466" width="260" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="XPL-RF-TQL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0Vb-WR-o7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="1fF-pn-rLe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1kX-Ap-6kx" secondAttribute="bottom" constant="113" id="75I-Gf-MnQ"/>
-                            <constraint firstItem="0Vb-WR-o7b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="378" id="87y-Dl-kkw"/>
                             <constraint firstItem="1kX-Ap-6kx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8oT-ff-nPx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Vb-WR-o7b" secondAttribute="trailing" constant="89" id="Yvm-1E-A5r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="owW-Lb-AIY"/>
-                    <connections>
-                        <outlet property="CountNewNotification" destination="0Vb-WR-o7b" id="sNe-4Q-y0j"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
