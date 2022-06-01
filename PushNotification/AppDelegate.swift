@@ -10,14 +10,40 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    let notificationCenter = UNUserNotificationCenter.current()
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    // Запрос на уведомления
+        requestAuthorization()
+        print(requestAuthorization)
         return true
     }
-
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+//        let aps = userInfo[AnyHashable("aps")]! as! NSDictionary
+//        let alert = aps["alert"]! as! NSDictionary
+//        let url = alert["link_url"] as! String
+//
+//        saveNewUrl(url)
+//        completionHandler(.newData)
+        
+        print("didReceiveRemoteNotification")
+    }
+    
+//    func application(_ application: UIApplication, didReceiveRemoteNotification data: [AnyHashable : Any]) {
+//
+//
+//
+//        let aps = data[AnyHashable("aps")]! as! NSDictionary
+//        let alert = aps["alert"]! as! NSDictionary
+//        let url = alert["link_url"] as! String
+//
+//        saveNewUrl(url)
+//    }
+    
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -30,6 +56,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func requestAuthorization() {
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            print("Coplete \(granted)")
+        }
+    }
+    
+    func saveNewUrl(_ string: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        guard let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context) else {return}
+        
+        let taskObjet = Entity(entity: entity, insertInto: context)
+        taskObjet.stringUrl = string
+        do {
+            try context.save()
+            imageUrls.append(taskObjet)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 
     // MARK: - Core Data stack
