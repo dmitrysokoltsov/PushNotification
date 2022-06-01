@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  PushNotification
-//
-//  Created by Dmitry Sokoltsov on 27.05.2022.
-//
-
 import UIKit
 import CoreData
 
@@ -15,34 +8,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Запрос на уведомления
         requestAuthorization()
-        print(requestAuthorization)
         return true
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-//        let aps = userInfo[AnyHashable("aps")]! as! NSDictionary
-//        let alert = aps["alert"]! as! NSDictionary
-//        let url = alert["link_url"] as! String
-//
-//        saveNewUrl(url)
-//        completionHandler(.newData)
+        guard let aps = userInfo[AnyHashable("aps")]! as? NSDictionary,
+              let alert = aps["alert"]! as? NSDictionary,
+              let url = alert["link_url"] as? String else {
+        completionHandler(.failed)
+        return }
+        
+        saveNewUrl(url)
+        completionHandler(.newData)
         
         print("didReceiveRemoteNotification")
     }
-    
-//    func application(_ application: UIApplication, didReceiveRemoteNotification data: [AnyHashable : Any]) {
-//
-//
-//
-//        let aps = data[AnyHashable("aps")]! as! NSDictionary
-//        let alert = aps["alert"]! as! NSDictionary
-//        let url = alert["link_url"] as! String
-//
-//        saveNewUrl(url)
-//    }
-    
     
     // MARK: UISceneSession Lifecycle
 
@@ -124,6 +105,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 

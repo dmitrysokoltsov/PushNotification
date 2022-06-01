@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  PushNotification
-//
-//  Created by Dmitry Sokoltsov on 27.05.2022.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
