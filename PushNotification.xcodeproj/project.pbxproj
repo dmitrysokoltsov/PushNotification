@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B58EC50F55D257455741814 /* Pods_PushNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913BA008BF7AD8E9087B7131 /* Pods_PushNotification.framework */; };
 		E872714928412043007CEEB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872714828412043007CEEB1 /* AppDelegate.swift */; };
 		E872714B28412043007CEEB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872714A28412043007CEEB1 /* SceneDelegate.swift */; };
 		E872714D28412043007CEEB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872714C28412043007CEEB1 /* ViewController.swift */; };
@@ -19,10 +18,24 @@
 		E872716628412969007CEEB1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872716528412969007CEEB1 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E8FAABF32846954900A4E690 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		913BA008BF7AD8E9087B7131 /* Pods_PushNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PushNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49E0528FC1E2C96E61A2394 /* Pods-PushNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification.release.xcconfig"; path = "Target Support Files/Pods-PushNotification/Pods-PushNotification.release.xcconfig"; sourceTree = "<group>"; };
 		E4DF1CF051D093492272908D /* Pods-PushNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification.debug.xcconfig"; path = "Target Support Files/Pods-PushNotification/Pods-PushNotification.debug.xcconfig"; sourceTree = "<group>"; };
+		E811E2152846886800CD3C42 /* file.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.apns; sourceTree = "<group>"; };
+		E841125A2846A73C008D5F41 /* PushNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotification.entitlements; sourceTree = "<group>"; };
 		E872714528412043007CEEB1 /* PushNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E872714828412043007CEEB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E872714A28412043007CEEB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B58EC50F55D257455741814 /* Pods_PushNotification.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +72,6 @@
 		BF47A267622FA471425B0966 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				913BA008BF7AD8E9087B7131 /* Pods_PushNotification.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,6 +107,8 @@
 				E872715628412044007CEEB1 /* LaunchScreen.storyboard */,
 				E872715928412044007CEEB1 /* Info.plist */,
 				E872715128412043007CEEB1 /* PushNotification.xcdatamodeld */,
+				E841125A2846A73C008D5F41 /* PushNotification.entitlements */,
+				E811E2152846886800CD3C42 /* file.apns */,
 			);
 			path = PushNotification;
 			sourceTree = "<group>";
@@ -112,6 +125,7 @@
 				E872714228412043007CEEB1 /* Frameworks */,
 				E872714328412043007CEEB1 /* Resources */,
 				FC1DC18D008A5DBA90FD1377 /* [CP] Embed Pods Frameworks */,
+				E8FAABF32846954900A4E690 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -366,9 +380,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMLJ6G75K8;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -395,9 +410,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VMLJ6G75K8;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
