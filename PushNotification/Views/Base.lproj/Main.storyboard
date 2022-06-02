@@ -90,18 +90,11 @@
                     </collectionView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0QB-6U-MQx">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="yyq-k0-zSS">
-                                <connections>
-                                    <action selector="addUrl:" destination="tBn-OP-HBD" id="3rm-y5-fRc"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="trash" id="3XN-OW-JuH">
-                                <connections>
-                                    <action selector="deleteImage:" destination="tBn-OP-HBD" id="IMn-ZB-koS"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="3XN-OW-JuH">
+                            <connections>
+                                <action selector="deleteImage:" destination="tBn-OP-HBD" id="IMn-ZB-koS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>

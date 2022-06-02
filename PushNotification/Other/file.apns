@@ -3,10 +3,10 @@
     "aps": {
         "alert": {
             "body": "New Image",
-            "title": "NE RABOTAET NIHUYA",
+            "title": "Push Notification",
             "link_url": "https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-marilyn-scott-0.png"
         },
         "badge": 1,
     },
-    "content-available": 1,
+    "content-available": 1
 }
