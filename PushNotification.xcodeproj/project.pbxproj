@@ -94,13 +94,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E8437DB92848B49100E32F9C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		E8437DBA2848B49C00E32F9C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +162,6 @@
 				E841125A2846A73C008D5F41 /* PushNotification.entitlements */,
 				E86435A02848CA7600E1103F /* Delegates */,
 				E864359F2848C9D500E1103F /* CoreData */,
-				E8437DB92848B49100E32F9C /* Models */,
 				E864359E2848C88700E1103F /* Other */,
 				E8437DBE2848B73900E32F9C /* Protocols */,
 				E8437DBA2848B49C00E32F9C /* ViewModels */,
