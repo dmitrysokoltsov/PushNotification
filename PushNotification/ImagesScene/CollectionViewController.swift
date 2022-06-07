@@ -1,25 +1,25 @@
 import UIKit
 import SDWebImage
-import CoreData
 
 private let reuseIdentifier = "Cell"
-var imageUrls: [Entity] = []
 
 class CollectionViewController: UICollectionViewController {
     
-    @IBAction func deleteImage(_ sender: UIBarButtonItem) {
-        ViewModel().deleteData()
-        self.collectionView.reloadData()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    var viewModel: ViewModelProtocol?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ViewModel().fetch()
+        viewModel?.onAppear()
+    }
+    
+    //MARK: - Public Methods
+    func reloadCollection() {
+        collectionView.reloadData()
+    }
+
+    // MARK: - Actions
+    @IBAction func deleteImage(_ sender: UIBarButtonItem) {
+        viewModel?.delete()
     }
     
     // MARK: UICollectionViewDataSource
@@ -29,15 +29,13 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageUrls.count
+        return viewModel?.items.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
-        let imageUrl = imageUrls[indexPath.row]
-        let currentImageUrl = imageUrl.stringUrl
-        guard let url = URL(string: currentImageUrl ?? "") else {return cell}
+        guard let url = viewModel?.items[indexPath.row] else { return cell }
         
         cell.imageCell.sd_setImage(with: url, completed: nil)
         
