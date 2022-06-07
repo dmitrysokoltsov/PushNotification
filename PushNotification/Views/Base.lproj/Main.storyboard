@@ -26,7 +26,6 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                 <connections>
                                     <action selector="buttonToSecondView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KvQ-4H-YTP"/>
-                                    <segue destination="tBn-OP-HBD" kind="show" id="tiA-Nj-jQQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,7 +45,7 @@
         <!--Collection View Controller-->
         <scene sceneID="HkD-YJ-auA">
             <objects>
-                <collectionViewController id="tBn-OP-HBD" customClass="CollectionViewController" customModule="PushNotification" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CollectionViewController" id="tBn-OP-HBD" customClass="CollectionViewController" customModule="PushNotification" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8Js-bl-3D1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

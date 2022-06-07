@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8437DBD2848B70F00E32F9C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8437DBC2848B70F00E32F9C /* ViewModel.swift */; };
-		E8437DC02848B75500E32F9C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8437DBF2848B75500E32F9C /* Data.swift */; };
-		E8437DC22848B8CE00E32F9C /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8437DC12848B8CE00E32F9C /* CoreData.swift */; };
+		E8437DC22848B8CE00E32F9C /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8437DC12848B8CE00E32F9C /* CoreDataService.swift */; };
 		E864359D2848C83200E1103F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E864359C2848C83200E1103F /* SceneDelegate.swift */; };
 		E872714928412043007CEEB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872714828412043007CEEB1 /* AppDelegate.swift */; };
 		E872714D28412043007CEEB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872714C28412043007CEEB1 /* ViewController.swift */; };
@@ -40,8 +39,7 @@
 		E811E2152846886800CD3C42 /* file.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.apns; sourceTree = "<group>"; };
 		E841125A2846A73C008D5F41 /* PushNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotification.entitlements; sourceTree = "<group>"; };
 		E8437DBC2848B70F00E32F9C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		E8437DBF2848B75500E32F9C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		E8437DC12848B8CE00E32F9C /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		E8437DC12848B8CE00E32F9C /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		E864359C2848C83200E1103F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E872714528412043007CEEB1 /* PushNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E872714828412043007CEEB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,28 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				E872714C28412043007CEEB1 /* ViewController.swift */,
-				E87271632841295A007CEEB1 /* CollectionViewController.swift */,
-				E872716528412969007CEEB1 /* CollectionViewCell.swift */,
 				E872715628412044007CEEB1 /* LaunchScreen.storyboard */,
 				E872714E28412043007CEEB1 /* Main.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		E8437DBA2848B49C00E32F9C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				E8437DBC2848B70F00E32F9C /* ViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		E8437DBE2848B73900E32F9C /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				E8437DBF2848B75500E32F9C /* Data.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E864359E2848C88700E1103F /* Other */ = {
@@ -123,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E872715128412043007CEEB1 /* PushNotification.xcdatamodeld */,
-				E8437DC12848B8CE00E32F9C /* CoreData.swift */,
+				E8437DC12848B8CE00E32F9C /* CoreDataService.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -158,16 +138,33 @@
 		E872714728412043007CEEB1 /* PushNotification */ = {
 			isa = PBXGroup;
 			children = (
-				E872715928412044007CEEB1 /* Info.plist */,
 				E841125A2846A73C008D5F41 /* PushNotification.entitlements */,
-				E86435A02848CA7600E1103F /* Delegates */,
+				E872715928412044007CEEB1 /* Info.plist */,
 				E864359F2848C9D500E1103F /* CoreData */,
+				E86435A02848CA7600E1103F /* Delegates */,
+				E8A3B08F284F3166004CA59C /* ImagesScene */,
 				E864359E2848C88700E1103F /* Other */,
-				E8437DBE2848B73900E32F9C /* Protocols */,
-				E8437DBA2848B49C00E32F9C /* ViewModels */,
 				E8437DB82848B48100E32F9C /* Views */,
 			);
 			path = PushNotification;
+			sourceTree = "<group>";
+		};
+		E8A3B08F284F3166004CA59C /* ImagesScene */ = {
+			isa = PBXGroup;
+			children = (
+				E87271632841295A007CEEB1 /* CollectionViewController.swift */,
+				E8437DBC2848B70F00E32F9C /* ViewModel.swift */,
+				E8A3B090284F3193004CA59C /* View */,
+				E872716528412969007CEEB1 /* CollectionViewCell.swift */,
+			);
+			path = ImagesScene;
+			sourceTree = "<group>";
+		};
+		E8A3B090284F3193004CA59C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +288,9 @@
 				E864359D2848C83200E1103F /* SceneDelegate.swift in Sources */,
 				E872716628412969007CEEB1 /* CollectionViewCell.swift in Sources */,
 				E872714928412043007CEEB1 /* AppDelegate.swift in Sources */,
-				E8437DC22848B8CE00E32F9C /* CoreData.swift in Sources */,
+				E8437DC22848B8CE00E32F9C /* CoreDataService.swift in Sources */,
 				E87271642841295A007CEEB1 /* CollectionViewController.swift in Sources */,
 				E8437DBD2848B70F00E32F9C /* ViewModel.swift in Sources */,
-				E8437DC02848B75500E32F9C /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
