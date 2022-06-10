@@ -1,47 +1,62 @@
 import UIKit
 import UserNotifications
 import FirebaseMessaging
+import FirebaseCore
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
     
-    let notificationCenter = UNUserNotificationCenter.current()
-    let fcmToken = "AAAAW0t3scA:APA91bEkWYvdd67fsNwXm8cGGlgNc6dCXejLoOaKPrLvR8NAlAKr6LPssPjW5e7p6_W2goRjrshPgPwCJbsWD_ZtY3Vh9zDyw9c6EwQ4l1shAp-8NeiFaVtDrY2PudCVwjj8cCCn3qsO"
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        application.registerForRemoteNotifications()
         requestAuthorization()
         return true
     }
     
-    func messaging(_ messaging: Messaging,
-                   didReceiveRegistrationToken fcmToken: String?) {
-        print("Received fcmToken: \(String(describing: fcmToken))")
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        messaging.token { token, _ in
+            guard let token = token else {
+                return
+            }
+            print("TOKEN:\(token)")
         }
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("back")
+        updateImageFromNotification(didReceive: response)
+        completionHandler()
+    }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
         guard let aps = userInfo[AnyHashable("aps")] as? NSDictionary,
               let alert = aps["alert"] as? NSDictionary,
-              let strURL = alert["link_url"] as? String else {
-        completionHandler(.failed)
-        return }
+              let strURL = alert["link_url"] as? String else { return }
         
         CoreDataService.shared.saveData(strURL)
         completionHandler(.newData)
-        
-        print("didReceiveRemoteNotification")
     }
     
     // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
+    
     func requestAuthorization() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
         notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             print("Coplete \(granted)")
         }
+    }
+    
+    func updateImageFromNotification(didReceive response: UNNotificationResponse) {
+        let userInfo = response.notification.request.content.userInfo
+        guard let aps = userInfo[AnyHashable("aps")] as? NSDictionary,
+              let alert = aps["alert"] as? NSDictionary,
+              let strURL = alert["link_url"] as? String else { return }
+        
+        CoreDataService.shared.saveData(strURL)
+        print("didReceiveRemoteNotification")
     }
 }
 
