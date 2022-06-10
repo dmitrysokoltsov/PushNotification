@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E83F16982851139A0064CC67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83F16972851139A0064CC67 /* GoogleService-Info.plist */; };
 		E83F169B2851145B0064CC67 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E83F169A2851145B0064CC67 /* FirebaseAnalytics */; };
 		E83F169D2851145B0064CC67 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = E83F169C2851145B0064CC67 /* FirebaseMessaging */; };
 		E8437DBD2848B70F00E32F9C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8437DBC2848B70F00E32F9C /* ViewModel.swift */; };
 		E8437DC22848B8CE00E32F9C /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8437DC12848B8CE00E32F9C /* CoreDataService.swift */; };
+		E8443D80285395FA004211F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8443D7F285395FA004211F6 /* GoogleService-Info.plist */; };
 		E864359D2848C83200E1103F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E864359C2848C83200E1103F /* SceneDelegate.swift */; };
 		E872714928412043007CEEB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872714828412043007CEEB1 /* AppDelegate.swift */; };
 		E872714D28412043007CEEB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872714C28412043007CEEB1 /* ViewController.swift */; };
@@ -21,6 +21,7 @@
 		E872715828412044007CEEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E872715628412044007CEEB1 /* LaunchScreen.storyboard */; };
 		E87271642841295A007CEEB1 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87271632841295A007CEEB1 /* CollectionViewController.swift */; };
 		E872716628412969007CEEB1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872716528412969007CEEB1 /* CollectionViewCell.swift */; };
+		E8C16C1328524CDD008D97E8 /* file2.apns in Resources */ = {isa = PBXBuildFile; fileRef = E8C16C1228524CDD008D97E8 /* file2.apns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,10 +41,10 @@
 		A49E0528FC1E2C96E61A2394 /* Pods-PushNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification.release.xcconfig"; path = "Target Support Files/Pods-PushNotification/Pods-PushNotification.release.xcconfig"; sourceTree = "<group>"; };
 		E4DF1CF051D093492272908D /* Pods-PushNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotification.debug.xcconfig"; path = "Target Support Files/Pods-PushNotification/Pods-PushNotification.debug.xcconfig"; sourceTree = "<group>"; };
 		E811E2152846886800CD3C42 /* file.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = file.apns; sourceTree = "<group>"; };
-		E83F16972851139A0064CC67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E841125A2846A73C008D5F41 /* PushNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotification.entitlements; sourceTree = "<group>"; };
 		E8437DBC2848B70F00E32F9C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E8437DC12848B8CE00E32F9C /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		E8443D7F285395FA004211F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E864359C2848C83200E1103F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E872714528412043007CEEB1 /* PushNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E872714828412043007CEEB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		E872715928412044007CEEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E87271632841295A007CEEB1 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E872716528412969007CEEB1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E8C16C1228524CDD008D97E8 /* file2.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = file2.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				E872715428412044007CEEB1 /* Assets.xcassets */,
 				E811E2152846886800CD3C42 /* file.apns */,
+				E8C16C1228524CDD008D97E8 /* file2.apns */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				E841125A2846A73C008D5F41 /* PushNotification.entitlements */,
-				E83F16972851139A0064CC67 /* GoogleService-Info.plist */,
+				E8443D7F285395FA004211F6 /* GoogleService-Info.plist */,
 				E872715928412044007CEEB1 /* Info.plist */,
 				E864359F2848C9D500E1103F /* CoreData */,
 				E86435A02848CA7600E1103F /* Delegates */,
@@ -242,8 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8443D80285395FA004211F6 /* GoogleService-Info.plist in Resources */,
 				E872715828412044007CEEB1 /* LaunchScreen.storyboard in Resources */,
-				E83F16982851139A0064CC67 /* GoogleService-Info.plist in Resources */,
+				E8C16C1328524CDD008D97E8 /* file2.apns in Resources */,
 				E872715528412044007CEEB1 /* Assets.xcassets in Resources */,
 				E872715028412043007CEEB1 /* Main.storyboard in Resources */,
 			);
@@ -381,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -435,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -453,9 +457,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VMLJ6G75K8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -485,9 +489,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VMLJ6G75K8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
