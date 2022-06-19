@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("back")
+        print("")
         updateImageFromNotification(didReceive: response)
         completionHandler()
     }
@@ -59,4 +59,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         print("didReceiveRemoteNotification")
     }
 }
-
